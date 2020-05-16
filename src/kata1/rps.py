@@ -9,8 +9,11 @@ options = ["Piedra", "Papel", "Tijeras"]
 def quienGana(player, ai):
     
     # Tabla de combinaciones ganadoras
-    tabla_ganadora = (("Piedra","Tijeras"),("Papel","Piedra"),("Tijeras","Papel"))
+    tabla_ganadora = (("PIEDRA","TIJERAS"),("PAPEL","PIEDRA"),("TIJERAS","PAPEL"))
     
+    player = player.upper()
+    ai = ai.upper()
+
     if (player,ai) in tabla_ganadora:
         resultado = 'Ganaste!'
     elif player == ai:

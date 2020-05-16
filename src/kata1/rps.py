@@ -30,7 +30,9 @@ def Game():
     ai = randint(0,2)
     
     # El jugador elige
-    player = int(input("Selecciona (1) Piedra, (2) Papel, (3) Tijeras: "))
+    # player = int(input("Selecciona (1) Piedra, (2) Papel, (3) Tijeras: "))
+
+    player = 2
 
     # Depuramos la entrada del jugador
     while player != 1 and player != 2 and player != 3:
@@ -41,7 +43,7 @@ def Game():
     player-=1
 
     # Informamos de la elección de la AI
-    print("Yo he elegido: "+options[ai]+", así que... ")
+    # print("Yo he elegido: "+options[ai]+", así que... ")
     
 
     winner = quienGana(options[player], options[ai])

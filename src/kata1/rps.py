@@ -9,7 +9,7 @@ options = ["Piedra", "Papel", "Tijeras"]
 def quienGana(player, ai):
     
     # Tabla de combinaciones ganadoras
-    tabla_ganadora = ((0,2),(1,0),(2,1))
+    tabla_ganadora = (("Piedra","Tijeras"),("Papel","Piedra"),("Tijeras","Papel"))
     
     if (player,ai) in tabla_ganadora:
         resultado = 'Ganaste!'
@@ -41,7 +41,7 @@ def Game():
     print("Yo he elegido: "+options[ai]+", así que... ")
     
 
-    winner = quienGana(player, ai)
+    winner = quienGana(options[player], options[ai])
 
     print(winner)
 
